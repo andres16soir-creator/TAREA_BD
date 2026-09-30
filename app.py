@@ -61,3 +61,18 @@ conn.execute(
     """
 )
 conn.commit()
+
+print("\nLIBROS:")
+cursor = conn.execute("SELECT * FROM libros")
+for row in cursor:
+    print(row)
+
+print("\nLECTORES:")
+cursor = conn.execute("SELECT * FROM lectores")
+for fila in cursor:
+    print(fila)
+
+print("\nPRESTAMOS:")
+cursor = conn.execute("SELECT * FROM prestamos")
+for fila in cursor:
+    print(fila)
