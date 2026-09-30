@@ -39,4 +39,25 @@ conn.execute(
     """
 )
 
+
+conn.execute(
+    """
+    INSERT INTO libros (titulo, autor)
+    VALUES ('Cien años de soledad', 'Gabriel Garcia Marquez')
+    """
+)
+
+conn.execute(
+    """
+    INSERT INTO lectores (nombre, apellidos, fecha_registro)
+    VALUES ('Maria', 'Lopez', '2024-03-10')
+    """
+)
+
+conn.execute(
+    """
+    INSERT INTO prestamos (fecha, libro_id, lector_id)
+    VALUES ('2024-03-15', 1, 1)
+    """
+)
 conn.commit()
